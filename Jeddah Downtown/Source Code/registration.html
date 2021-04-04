@@ -1,0 +1,131 @@
+<html>
+<head> 
+<title> registration </title>
+<link rel="stylesheet" href="style.css">
+<link rel= "icon" href = "jd4.jpg">
+<script src="script.js"> </script>
+</head>
+
+<body>
+>
+<header>
+<img src="file.jpeg" alt="logo" width="100%"><!--  height="150" class="center"-->
+
+<nav id=nav >
+	<ul class=navlist>
+		<li><a href="about.html"> About	</a>	</li>
+		<li><a href="details.html"> Details	</a>	</li>
+		<li><a href="home.html"> Home	</a>	</li>
+		<li><a href="photo-page.html"> photos	</a>	</li>
+		<li><a href="registration.html"> Register	</a>	</li>
+		<li><a href="map.html"> Map	</a>	</li>
+	</ul> 
+</nav>
+</header>
+
+<main>
+<div class="breadcrumbs">
+	<ol id="bc">
+		<li><a href="home.html">Home</a></li>
+		<li>/</li>
+		<li>Register</li>
+	</ol>
+	
+</div>
+<br>
+<br>
+<div id="register">
+
+	<div>
+	<img src="jed11.jpeg" alt="jeddah picture" id="pic" width=700px height=746px >
+	
+	</div>
+
+<!-- 538 -->
+
+<div id="form">
+
+	
+	<!-- <legend>Your Information</legend><br> -->
+<form  id="forms" name="form_a" action="MAILTO:ksu.jeddah.sa@gmail.com?subject= General information" method="post" enctype="text/plain" onsubmit="return validate();" >
+
+  <div class="container">
+    <h1>Registeration</h1>
+    <hr>
+
+   <label for="name"><b>Name &nbsp; &nbsp;</b></label> <span id="messagename"></span>
+    <input type="text" id="Name" placeholder="Enter Name" name="Name" >
+
+ <label for="email"><b>Email &nbsp; &nbsp;</b></label> <span id="messageemail"></span>
+    <input type="text" id="Email" placeholder="Enter Email" name="Email" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">
+
+    <label for="psw"><b>National ID &nbsp; &nbsp;</b></label> <span id="messageid"></span>
+    <input type="text" id="National_ID" placeholder="Enter ID" name="National_ID">
+
+	<label for="gender"><b>Gender </b></label>
+	<input type="radio"id="GenderM" value="male" name="Gender"> Male
+    <input type="radio" id="GenderF"value="female" name="Gender" > Female &nbsp; &nbsp;<span id="messagegender"></span><br><br>
+	
+	<label for="age"><b>Age   </b>
+	<input type="number" id="Age" min="13" max="" name="Age" step="1" >
+	
+	<label for="city"><b>City   </b><label>
+	<select id="City" name="City" >
+    <option value="">None</option>
+    <option value="Jeddah">Jeddah</option>
+    <option value="Riyadh">Riyadh</option> 
+    <option value="Dammam">Dammam</option>
+    <option value="Abha">Abha</option>
+	<option value="Hail">Hail</option>
+	<option value="Tabouk">Tabouk</option>
+	<option value="Hassa">Hassa</option>
+	<option value="Other">Other</option>
+    </select>&nbsp; &nbsp;<span id="messagecity"></span><span id="messageage"></span><br><br>
+	
+	<label for="skill"><b>Skills &nbsp; &nbsp;</b></label><span id="messageskill"></span>
+	<textarea id="Skills" rows="4" cols="50" name="Skills" placeholder="Enter Skills" ></textarea>
+
+	<label for="file"><b>Other Information</b></label><br>
+	<input type="file" name="File"><br><br>
+	
+   <button type="submit" class="registerbtn" >Register</button>
+  </div>
+
+    
+   
+
+</form>
+		
+	 		<br><br>   
+			</div>
+			
+		
+			
+				<br>
+				<br>
+
+
+			</div>
+
+			<br>
+
+</main>
+
+
+<footer>
+
+<div id="copyright">
+<p>&#169; Copyright </p>
+</div>
+
+<div id="info">
+<a href="contactus.html" >Contact us</a>
+<br>
+<a href="aboutus-page.html" >About us</a> 
+<br>
+<a href="sitemap.html" >Sitemap</a> 
+</div>
+
+</footer>
+</body>
+</html>

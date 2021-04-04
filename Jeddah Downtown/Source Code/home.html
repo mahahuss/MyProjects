@@ -1,0 +1,206 @@
+<html>
+<head> 
+<title> Home </title>
+<link rel="stylesheet" href="style.css">
+<link rel= "icon" href = "jd4.jpg">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" class="home">
+</head>
+
+<body>
+<header>
+<img src="file.jpeg" alt="logo" width="100%" id="logo">
+
+<nav id=nav >
+	<ul class=navlist>
+		<li><a href="about.html"> About	</a>	</li>
+		<li><a href="details.html"> Details	</a>	</li>
+		<li><a href="home.html"> Home	</a>	</li>
+		<li><a href="photo-page.html"> photos	</a>	</li>
+		<li><a href="registration.html"> Register	</a>	</li>
+		<li><a href="map.html"> Map	</a>	</li>
+	</ul> 
+</nav>
+</header>
+
+<div id="homepage">
+<!--
+<div class="breadcrumbs">
+	<ol id="bc">
+		<li>Home</li>
+
+	</ol>
+	
+</div>-->
+<div id="hpart1">
+
+
+<div id="container">
+<br><br><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade" >
+  <img src="j1.jpg" width="1000" height="300" class="image">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="j2.jpeg" width="1000" height="300" class="image">
+ 
+</div>
+
+<div class="mySlides fade">
+  <img src="j3.jpeg" width="1000" height="300" class="image">
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<div id="summary">
+<p >As it is known that the Gulf area is considered as one of the main investment areas and many investors prefer to invest in real estate there in particular as one of the safest investment fields ever. So, the Saudi government planned to start an integrated project to develop Jeddah and turn it to a vital investment area in all fields. Also, it is expected to begin the new project <strong id="highlight">(New Jeddah Downtown)</strong> in the first quarter of 2019.</p>
+</div>
+</div>
+</div>
+
+
+<script class="home">
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+
+
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="hpart2">
+<div id="countDownDate">
+<p id="cdtitle"> We're coming soon</p>
+
+<p id="demo"></p>
+<script >
+// Set the date we're counting down to
+var countDownDate = new Date("december 31, 2020 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + " : " + hours + "  :  " + minutes + "  :  " + seconds;
+    
+
+	// If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Project Completed";
+  }
+}, 1000);
+</script>
+
+<ul id="cdlabel">
+<li>D</li>
+<li>H</li>
+<li>M</li>
+<li>S</li>
+</ul>
+
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<div id="hpart3">
+
+<br>
+<br>
+
+<video id="video" width="900" height="400" controls muted>
+<source src="vid.mp4" type="video/mp4">
+</video>
+
+
+
+<br>
+<br>
+</div>
+<br>
+<br>
+
+
+<div id="hpart4">
+
+<h2 id="Atitle"> ABOUT US</h2>
+<p class="para1"> We are here to show the world more information about Jeddah downtown project!<br>
+our website gives you expectations about it, and helps <br> to keep track the project state.</p>
+<h5 class="para2"><a id="buttoninhome" href="about.html"> Read more</a> </h5>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+<footer >
+
+<div id="copyright">
+<p>&#169; Copyright </p>
+</div>
+
+<div id="info">
+<a href="contactus.html" >Contact us</a>
+<br>
+<a href="aboutus-page.html" >About us</a> 
+<br>
+<a href="sitemap.html" >Sitemap</a> 
+</div>
+
+</footer>
+
+</body>
+
+</html>

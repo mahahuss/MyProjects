@@ -1,0 +1,117 @@
+<html>
+<head> 
+<title> Details </title>
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<link rel="stylesheet" href="style.css">
+<link rel= "icon" href = "jd4.jpg">
+<script src="script.js"> </script>
+  
+</head>
+
+<body class="home" id="home">
+<header>
+<img src="file.jpeg" alt="logo" width="100%" id="logo">
+
+<nav id=nav >
+	<ul class=navlist>
+		<li><a href="about.html"> About	</a>	</li>
+		<li><a href="details.html"> Details	</a>	</li>
+		<li><a href="home.html"> Home	</a>	</li>
+		<li><a href="photo-page.html"> photos	</a>	</li>
+		<li><a href="registration.html"> Register	</a>	</li>
+		<li><a href="map.html"> Map	</a>	</li>
+	</ul>  
+</nav>
+</header>
+
+<main>
+<div class="breadcrumbs">
+	<ol id="bc">
+		<li><a href="home.html">Home</a></li>
+		<li>/</li>
+		<li>Details</li>
+	</ol>
+	
+</div>
+  <br>
+  <br>
+
+<div id="pagecontent">	
+<div class="tableSection">
+<h2 >Project details and informations </h2>
+<br>
+<!--new--><label class="sorting">Sort table by:</label>
+<select class="sorting" name="sort by" onchange="sortTable(this.value)">
+<option value="0" >Area name</option>
+<option value="2" >cost</option>
+<option value="3" >Area size</option>
+</select>
+<br>
+<br>
+<!--new-->
+
+<table id="myTable">
+  <tr> 
+  <th class="thead" >Area name</th>
+	<th class="thead">Offer</th>
+    <th class="thead">Costs</th>
+    <th class="thead">size</th>
+  </tr>
+  
+  <tr> 
+  <td  >Hospitality</td>
+	<td>8000 Hotel </td>
+    <td>3 billion </td>
+    <td>0.5 m<sup>2</sup> </td>
+  </tr>
+  
+<tr> 
+  <td  >Residential</td>
+	<td>12000 Housing units </td>
+    <td>7 billion </td>
+    <td>2.5 m<sup>2</sup> </td>
+  </tr>
+  
+  <tr> 
+  <td >Office space</td>
+	<td>36000 Jobs </td>
+    <td>3 billion </td>
+    <td>0.5 m<sup>2</sup> </td>
+  </tr>
+  
+  <tr> 
+  <td  >Entertainment</td>
+	<td>10000 Places </td>
+    <td>5 billion </td>
+    <td>1.5 m<sup>2</sup> </td>
+  </tr>
+</table>
+
+</div>
+  <div class="graphSection" >
+  <h2 id="graphlabel" > Components Distribution</h2>
+  <br>
+<img id="graph" src="d1.jpeg" alt="graph"><!--  height="150" class="center"-->
+  </div>
+
+  </div>
+
+</main>
+
+<footer>
+
+<div id="copyright">
+<p>&#169; Copyright </p>
+</div>
+
+<div id="info">
+<a href="contactus.html" >Contact us</a>
+<br>
+<a href="aboutus-page.html" >About us</a> 
+<br>
+<a href="sitemap.html" >Sitemap</a> 
+</div>
+
+</footer>
+</body>
+</html>

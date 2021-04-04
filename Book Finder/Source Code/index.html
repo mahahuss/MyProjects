@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+
+
+    <title></title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/tooplate-style.css"> <!-- Templatemo style -->
+	<link rel="stylesheet" href="css/headerStyle.css"> <!-- header style -->
+
+</head>
+
+    <body>
+	
+
+    <div id='searchbox'>
+		<h1> BOOK FINDER </h1>
+		<div class="wrapper">
+		<form method="get">
+			<input id="search" placeholder= "...." >
+			<button id= "button" type="button" onclick="bookSearch()">FIND</button>
+			</form>
+		</div>
+	
+	</div>
+    
+             
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+
+function bookSearch(){
+
+		var search = document.getElementById('search').value;
+		document.getElementById('row').innerHTML = "";
+		console.log(search);
+	
+		$.ajax({
+			type:'GET',
+		url: "https://www.googleapis.com/books/v1/volumes?q="+search,
+			dataType: "json",
+			success: function(data){
+			
+			
+				for(i=0; i<data.items.length; i++) {
+				
+				if(data.items[i].volumeInfo.hasOwnProperty('authors')){ // to check if there authers
+		
+								row.innerHTML += "<figure class='col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item'> <br>"
+								+"<img src="+data.items[i].volumeInfo.imageLinks.thumbnail+">"
+								+" <p class='tm-figcaption' style='color:brown;'>" + data.items[i].volumeInfo.title+
+								"</p><p class='tm-figcaption'> by: "+data.items[i].volumeInfo.authors[0]+"</p> </figure>";
+																		}
+		
+
+				else{
+								row.innerHTML += "<figure class='col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item'> <br>"
+								+"<img src="+data.items[i].volumeInfo.imageLinks.thumbnail+">"
+								+" <p class='tm-figcaption' style='color:brown;'>" + data.items[i].volumeInfo.title+"</p> </figure>";
+
+					}
+
+
+
+	
+			} 
+		   
+													}
+			
+			
+		});
+}
+
+
+
+</script>
+                     
+                
+ <div class="row container" id="row">
+                            
+                           
+</div>   
+  
+  
+  
+<style>
+
+.col-lg-3 {
+  float: left;
+  width:128px;
+  height:350px;
+  border:1px solid #ccc;
+}
+img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width:150px;
+height:180px;
+}
+
+.tm-figcaption{
+  padding: 15px;
+  text-align: center;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+
+}
+
+
+</style>
+</body>
+</html>
